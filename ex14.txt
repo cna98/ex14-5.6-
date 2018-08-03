@@ -1,0 +1,92 @@
+
+
+
+//جمع تفریق ضرب تقسیم دو عدد با تایپ های متفاوت
+
+package ex14;
+
+import java.util.Scanner;
+
+
+public class Ex14 {
+	
+	public static void calculate(int num1 ,int num2)
+	{
+		int sum  , multiple  , subtract;
+		float division;
+		sum = num1 + num2;
+		multiple = num1 * num2;
+		division = (float)num1/num2;
+		subtract = num1 - num2;
+		System.out.print(String.format("Sum is %d\nMultiple is %d\nDivision is %f\nSubtract is %d\n", sum , multiple , division , subtract));
+	}
+	public static void calculate(float num1 ,float num2)
+	{
+		float sum  , multiple , division , subtract;
+		sum = num1 + num2;
+		multiple = num1 * num2;
+		division = num1/num2;
+		subtract = num1 - num2;
+		System.out.print(String.format("Sum is %f\nMultiple is %f\nDivision is %f\nSubtract is %f\n", sum , multiple , division , subtract));
+	}
+	public static void calculate(double num1 ,double num2)
+	{
+		double sum  , multiple , division , subtract;
+		sum = num1 + num2;
+		multiple = num1 * num2;
+		division = num1/num2;
+		subtract = num1 - num2;
+		System.out.print(String.format("Sum is %f\nMultiple is %f\nDivision is %f\nSubtract is %f\n", sum , multiple , division , subtract));
+	}
+	public static void calculate(short num1 ,short num2)
+	{
+		int sum  , multiple ,  subtract;
+		float division;
+		sum = num1 + num2;
+		multiple = num1 * num2;
+		division = (float)num1/num2;
+		subtract = num1 - num2;
+		System.out.print(String.format("Sum is %d\nMultiple is %d\nDivision is %f\nSubtract is %d\n", sum , multiple , division , subtract));
+	}
+	
+	public static void main(String[]args)
+	{
+		System.out.print("For int 1 , for float 2 , for double 3 , for short 4  :  ");
+		Scanner input = new Scanner(System.in);
+		int select = input.nextInt();
+		System.out.print("Enter two number : ");
+		if(select == 1)
+		{
+			int num1 , num2;
+			num1 = input.nextInt();
+			num2 = input.nextInt();
+			calculate(num1, num2);
+		}
+		if(select == 2)
+		{
+			float num1 , num2;
+			num1 = input.nextFloat();
+			num2 = input.nextFloat();
+			calculate(num1, num2);
+		}
+		if(select == 3)
+		{
+			double num1 , num2;
+			num1 = input.nextDouble();
+			num2 = input.nextDouble();
+			calculate(num1, num2);
+		}
+		if(select == 4)
+		{
+			short num1 , num2;
+			num1 = input.nextShort();
+			num2 = input.nextShort();
+			calculate(num1, num2);
+		}
+			
+		
+		
+		
+	}
+
+}
